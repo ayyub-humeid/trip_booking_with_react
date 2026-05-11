@@ -1,47 +1,46 @@
 import React, { useState } from "react";
-// import {
-//     FaFacebookF,
-//     FaTwitter,
-//     FaGooglePlusG,
-//     FaInstagram,
-// FaBars
-// } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGooglePlusG,
+  FaInstagram,
+  FaBars,
+} from "react-icons/fa";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
-    console.log("sdsd");
     setNav(!nav);
   };
 
   return (
     <div className="w-full min-h-[50px] items-center flex justify-between bg-gray-700/80 absolute text-white z-10">
       <ul className="hidden sm:flex px-4">
-        <li>
-          <a href="/">Home</a>
+        <li className="relative group">
+          <a href="/" className="transition-colors duration-200 hover:text-[var(--primary-light)]">Home</a>
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[var(--primary-light)] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="#gallery">Gallery</a>
+        <li className="relative group">
+          <a href="#gallery" className="transition-colors duration-200 hover:text-[var(--primary-light)]">Gallery</a>
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[var(--primary-light)] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="#deals">Deals</a>
+        <li className="relative group">
+          <a href="#deals" className="transition-colors duration-200 hover:text-[var(--primary-light)]">Deals</a>
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[var(--primary-light)] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="#contact">Contact</a>
+        <li className="relative group">
+          <a href="#contact" className="transition-colors duration-200 hover:text-[var(--primary-light)]">Contact</a>
+          <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[var(--primary-light)] transition-all duration-300 group-hover:w-full"></span>
         </li>
       </ul>
       <div className="flex justify-between">
-        {/* <FaFacebookF /> 
-        <FaTwitter />
-        <FaGooglePlusG />
-        <FaInstagram /> */}
-        <span className="mx-4">f</span>
-        <span className="mx-4">t</span>
-        <span className="mx-4">g</span>
-        <span className="mx-4">inst</span>
+        <FaFacebookF className="mx-4 cursor-pointer hover:text-[var(--primary-light)] transition-colors duration-200 hover:scale-125 transform" />
+        <FaTwitter className="mx-4 cursor-pointer hover:text-[var(--primary-light)] transition-colors duration-200 hover:scale-125 transform" />
+        <FaGooglePlusG className="mx-4 cursor-pointer hover:text-[var(--primary-light)] transition-colors duration-200 hover:scale-125 transform" />
+        <FaInstagram className="mx-4 cursor-pointer hover:text-[var(--primary-light)] transition-colors duration-200 hover:scale-125 transform" />
       </div>
       <div onClick={handleNav} className="sm:hidden z-10">
-        {/* <FaBar size={20} className="mr-4 cursor-pointer"/> */}
-        <span>___</span>
+        <FaBars size={20} className="mr-4 cursor-pointer" />
       </div>
       {/* mobile menu */}
       <div
