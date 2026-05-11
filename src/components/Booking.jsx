@@ -44,7 +44,7 @@ const Booking = () => {
         </div>
         <div className="flex flex-col my-2 p-2 w-full">
           <label htmlFor="">Search</label>
-          <button className="w-full">Rates & Availabilities</button>
+          <button className="w-full transition-transform duration-200 hover:scale-[1.02] hover:shadow-lg">Rates & Availabilities</button>
         </div>
       </form>
     </div>
@@ -52,3 +52,4 @@ const Booking = () => {
 };
 
 export default Booking;
+// git add src/components/Booking.jsx
